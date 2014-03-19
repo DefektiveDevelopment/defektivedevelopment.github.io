@@ -16,6 +16,7 @@ group: navigation
 </ul>
 
 
+<h2>Categories</h2>
 {% for category in site.categories %}
 <h2 id="{{ category[0] }}-ref">{{ category[0] | join: "/" }}</h2>
 <ul>
@@ -25,6 +26,7 @@ group: navigation
 {% endfor %}
 
 
+<h2>Tags</h2>
 <ul class="tag_box inline">
 {% assign tags_list = site.tags %}
 {% include JB/tags_list %}
