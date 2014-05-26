@@ -22,7 +22,7 @@ tagline: or news in general
                 apple's dev account.
             </p>
             <p>
-                <a class="btn btn-primary btn-lg" role="button" href="https://play.google.com/store/apps/details?id=com.mentallydefective.dreamtime.beta">Get it on Google Play</a>
+                <a class="btn btn-primary btn-lg" role="button" href="https://play.google.com/store/apps/details?id=com.mentallydefective.dreamtime">Get it on Google Play</a>
                 <a class="btn btn-lg" role="button" href="http://defektivedevelopment.github.io/daily-delirium/">View Game Site</a>
             </p>
         </div>
