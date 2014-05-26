@@ -22,14 +22,14 @@ Usage:
 {% else %}
   {% if categories_list.first[0] == null %}
     {% for category in categories_list %}
-    <a class="label label-warning" href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref">
-    		{{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
+    <a class="label label-warning" href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref" title="{{ site.categories[category].size }}">
+    		{{ category | join: "/" }}
     	</a>
     {% endfor %}
   {% else %}
     {% for category in categories_list %}
-    	<a class="label label-warning" href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref">
-    		{{ category[0] | join: "/" }} <span>{{ category[1].size }}</span>
+    	<a class="label label-warning" href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref" title="{{ category[1].size }}">
+    		{{ category[0] | join: "/" }} 
     	</a>
     {% endfor %}
   {% endif %}

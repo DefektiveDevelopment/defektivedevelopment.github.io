@@ -26,19 +26,33 @@ tagline: or news in general
                 <a class="btn btn-lg" role="button" href="http://defektivedevelopment.github.io/daily-delirium/">View Game Site</a>
             </p>
         </div>
-</div>
+    </div>
 </div>
 
 
-<div class="page-header">
+<!-- <div class="page-header">
   <h1>{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
-</div>
+</div> -->
 
-<div>
+
+
   {% for post in site.posts %}
-    <p>
-        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+    <div class="dd-post">
+        <h2><a href="{{ post.url }}">{{ post.title }}</a> <small class="pull-right">{{ post.date | date: "%B %e, %Y" }}</small></h2>
+
         {{ post.content }}
-    </p>
+
+        
+
+    {% unless post.categories == empty %}
+        {% assign categories_list = post.categories %}
+        {% include JB/categories_list %}
+    {% endunless %}
+
+    {% unless post.tags == empty %}
+        {% assign tags_list = post.tags %}
+        {% include JB/tags_list %}
+    {% endunless %}
+    </div>
   {% endfor %}
-</div>
+
